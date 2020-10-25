@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="dialect">
+            org.hibernate.dialect.H2Dialect
+        </property>
+        <property name="connection.url">
+            <![CDATA[jdbc:mysql://localhost:3306/aed_geografia?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC]]></property>
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">root</property>
+        <mapping class="Modelo.ComautonomaEntity"/>
+        <mapping class="Modelo.LocalidadEntity"/>
+        <mapping class="Modelo.ProvinciaEntity"/>
+
+    </session-factory>
+</hibernate-configuration>
